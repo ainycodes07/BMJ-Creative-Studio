@@ -1,0 +1,308 @@
+/* importing fonts */
+
+/* =========================================
+   SANS: Bricolage Grotesque (400, 600, 700)
+   ========================================= */
+@font-face {
+    font-family: "Bricolage Grotesque";
+    src: url("../assets/fonts/bricolage-grotesque-v9-latin-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bricolage Grotesque";
+    src: url("../assets/fonts/bricolage-grotesque-v9-latin-600.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bricolage Grotesque";
+    src: url("../assets/fonts/bricolage-grotesque-v9-latin-700.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* =========================================
+   SANS FALLBACK: DM Sans (400, 700)
+   ========================================= */
+@font-face {
+    font-family: "DM Sans";
+    src: url("../assets/fonts/DMSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url("../assets/fonts/DMSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* =========================================
+   SERIF: Instrument Serif (400 normal & italic)
+   ========================================= */
+@font-face {
+    font-family: "Instrument Serif";
+    src: url("../assets/fonts/InstrumentSerif-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Instrument Serif";
+    src: url("../assets/fonts/InstrumentSerif-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* =========================================
+   SERIF FALLBACK: Playfair Display (400, 400 italic, 700)
+   ========================================= */
+@font-face {
+    font-family: "Playfair Display";
+    src: url("../assets/fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("../assets/fonts/PlayfairDisplay-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("../assets/fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* =========================================
+   USAGE
+   ========================================= */
+:root {
+    --font-sans: "Bricolage Grotesque", "DM Sans", sans-serif;
+    --font-serif: "Instrument Serif", "Playfair Display", serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-serif {
+    font-family: var(--font-serif);
+    font-weight: 400;
+}
+
+.font-serif-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.font-serif-bold {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+
+/* ================================
+        STYLES
+=================================*/
+
+html,
+body {
+    overflow-x: clip;
+}
+
+body{
+    margin: 0;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    /* Normal */
+    font-style: normal;
+    line-height: 1.6;
+}
+
+
+
+/* HEADER */
+
+.navbar {
+    position: relative;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border:1px solid black;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color:#595959;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.nav-links .active{
+    color:black;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Main */
+
+.faqs-section{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+/* Main page heading */
+h1 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.15;
+    font-size: clamp(50px,10vw, 100px);
+    text-align: center;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+}
+
+.intro{
+    font-size: clamp(12px, 5vw, 24px);
+    font-weight: 400;
+    text-align: justify;
+    max-width:650px;
+    margin:0 auto;
+}
+
+.faqs{
+    margin:10% auto;
+    max-width:1000px;
+}
+
+details{
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 3rem;
+    font-family: inherit;
+    margin:2% auto;
+}
+
+summary{
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+    list-style-type:none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    
+    content: "🞤";
+    /* Change this to any symbol, emoji, or SVG */
+}
+
+details[open] summary::after {
+    content: "—";
+}
+
+.faqs p{
+    font-size: clamp(10px, 5vw, 22px);
+}
+
+footer{
+    padding: 20px 50px;
+    text-align: center;
+    color: #595959;
+    font-size: 12px;
+}
+
+@media (max-width:768px) {
+    .menu-toggle {
+            display: block;
+        }
+    
+        .nav-links {
+            position: absolute;
+            top: 64px;
+            left:100%;
+            width: 100%;
+            background: white;
+            border:1px solid black;
+            flex-direction: column;
+            gap: 0;
+            transform: translateX(0);
+            visibility: hidden;
+            transition: transform 0.3s ease, visibility 0.1s ease;
+        }
+    
+        .nav-links a {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid black;
+        }
+    
+        .nav-links.active {
+            transform: translateX(-100%);
+            visibility: visible;
+        }
+
+        details{
+            padding:1.5rem;
+        }
+}
